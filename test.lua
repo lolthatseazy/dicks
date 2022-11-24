@@ -60,7 +60,7 @@ local Entities = {
 
 			local early, latest = SpawnerLibrary.Calculate()
 
-			val.Value = early.Nodes["1"].CFrame + Vector3.new(0,5,0)
+			
 
 			local anim = Instance.new("Animation")
 			anim.AnimationId = "rbxassetid://9896641335"
@@ -71,8 +71,6 @@ local Entities = {
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
 
 			require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator["Main_Game"].RemoteListener.Cutscenes.SeekIntro)(u2)
-			firgur.Figure.Footsteps:Play()
-			firgur.Figure.FootstepsFar:Play()
 
 			local anim = Instance.new("Animation")
 			anim.AnimationId = "rbxassetid://7758895278"
@@ -80,7 +78,8 @@ local Entities = {
 			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
 
 			local chase = true
-
+                        firgur.Figure.Footsteps:Play()
+			firgur.Figure.FootstepsFar:Play()
 			coroutine.wrap(function()
 				while task.wait() do
 					if chase then
