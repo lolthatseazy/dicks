@@ -80,8 +80,7 @@ local Entities = {
 
 			local chase = true
 			coroutine.wrap(function()
-			firgur.Figure.Footsteps:Play()
-			firgur.Figure.FootstepsFar:Play()
+
 				while task.wait() do
 					if chase then
 						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
