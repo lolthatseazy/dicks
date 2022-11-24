@@ -1,3 +1,4 @@
+print("Well done update")
 local SpawnerLibrary = {
 	Tween = function(object, input, studspersecond, offset)
 		local char = game:GetService("Players").LocalPlayer.Character;
@@ -78,9 +79,9 @@ local Entities = {
 			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
 
 			local chase = true
-                        firgur.Figure.Footsteps:Play()
-			firgur.Figure.FootstepsFar:Play()
 			coroutine.wrap(function()
+			firgur.Figure.Footsteps:Play()
+			firgur.Figure.FootstepsFar:Play()
 				while task.wait() do
 					if chase then
 						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
@@ -90,7 +91,7 @@ local Entities = {
 					end
 				end
 			end)()
-
+                              
 			if Kill then
 				-- Not coded in yet
 			end
