@@ -77,7 +77,8 @@ local Entities = {
 			anim.AnimationId = "rbxassetid://7758895278"
 
 			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
-
+			firgur.Figure.Footsteps:Play()
+			firgur.Figure.FootstepsFar:Play()
 			local chase = true
 			coroutine.wrap(function()
 
